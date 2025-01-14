@@ -1,4 +1,4 @@
-package main.util;
+package main.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
  *
  * @author jessejunior
  */
-public class Database {
+public class ConnectionFactory {
     
     //"jdbc:mysql://localhost:3306/banco"
     private static final String DB_PREFIX = "jdbc:mysql://";
@@ -24,7 +24,7 @@ public class Database {
     private static Connection con = null;
     
     // Construtor privado para nenhuma outra classe criar uma nova instância usando o new Database()
-    private Database() {}
+    private ConnectionFactory() {}
     
     /**
      * Criar uma conexão DB
