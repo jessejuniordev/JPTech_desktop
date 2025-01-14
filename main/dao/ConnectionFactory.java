@@ -52,6 +52,7 @@ public class ConnectionFactory {
                 System.out.println("Desconectado");
             }
         } catch (SQLException e) {
+            /* Evite deixar mensagens de erro aqui em Prod */
             System.out.println("Erro ao fechar conexão: " + e.getMessage());
         }
     }
